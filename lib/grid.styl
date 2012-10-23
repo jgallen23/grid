@@ -2,20 +2,29 @@ grids = 12,16
 gutter = 20
 
 [class^=grid] {
+  box-sizing: border-box;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   [class^=col] {
     float: left;
     box-sizing: border-box;
-    padding-right: unit(gutter, 'px');
+    padding: 0 unit(gutter, 'px');
 
-    &:after {
-      content: "";
-      display: table;
-      clear: both;
+    & > [class^=col]:first-child {
+      padding-left: 0px;
     }
-    &:last-of-type {
+    & > [class^=col]:last-child {
       padding-right: 0px;
     }
   }
+}
+
+.grid-pad {
+  padding: unit(gutter, 'px');
 }
 
 for grid in grids {
