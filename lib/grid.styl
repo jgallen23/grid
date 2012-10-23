@@ -1,0 +1,29 @@
+grids = 12,16
+gutter = 20
+
+[class^=grid] {
+  [class^=col] {
+    float: left;
+    box-sizing: border-box;
+    padding-right: unit(gutter, 'px');
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    &:last-of-type {
+      padding-right: 0px;
+    }
+  }
+}
+
+for grid in grids {
+  .grid{grid} {
+    for col in 1..grid {
+      .col{col} {
+        width: unit(col/grid * 100, '%');
+      }
+    }
+  }
+}
