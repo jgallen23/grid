@@ -1,24 +1,24 @@
-[class^=grid] {
+[class*=grid] {
   box-sizing: border-box;
 }
-[class^=grid]:after {
+[class*=grid]:after {
   content: "";
   display: table;
   clear: both;
 }
-[class^=grid] [class^=col] {
+[class*=grid] [class*=col] {
   float: left;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 10px;
 }
-[class^=grid] [class^=col] > [class^=col]:first-child {
+[class*=grid] [class*=col]:first-child {
   padding-left: 0px;
 }
-[class^=grid] [class^=col] > [class^=col]:last-child {
+[class*=grid] [class*=col]:last-child {
   padding-right: 0px;
 }
 .grid-pad {
-  padding: 20px;
+  padding: 10px;
 }
 .grid12 .col1 {
   width: 8.333333333333332%;

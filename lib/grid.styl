@@ -1,7 +1,7 @@
 grids = 12,16
-gutter = 20
+gutter = 10
 
-[class^=grid] {
+[class*=grid] {
   box-sizing: border-box;
   &:after {
     content: "";
@@ -9,15 +9,15 @@ gutter = 20
     clear: both;
   }
 
-  [class^=col] {
+  [class*=col] {
     float: left;
     box-sizing: border-box;
     padding: 0 unit(gutter, 'px');
 
-    & > [class^=col]:first-child {
+    &:first-child {
       padding-left: 0px;
     }
-    & > [class^=col]:last-child {
+    &:last-child {
       padding-right: 0px;
     }
   }
