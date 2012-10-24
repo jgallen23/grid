@@ -1,9 +1,12 @@
 {
   "name": "grid",
-  "description": "",
+  "private": "true",
+  "description": "a simple grid framework",
   "homepage": "https://github.com/jgallen23/grid",
   "author": "Greg Allen <@jgaui> (http://jga.me)",
+  "company": "JGA",
   "version": "0.0.1",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/jgallen23/grid.git"
@@ -11,10 +14,8 @@
   "dependencies": {
   },
   "devDependencies": {
-    "stylus": "*"
-  },
-  "scripts": {
-    "build": "stylus < lib/grid.styl > dist/grid.css"
+    "grunt": "~0.3.17",
+    "grunt-contrib-stylus": "~0.3.1",
+    "grunt-growl": "~0.1.2"
   }
 }
-
