@@ -1,4 +1,14 @@
+/*!
+ * grid - a simple grid framework
+ * v0.0.1
+ * https://github.com/jgallen23/grid
+ * copyright JGA 2012
+ * MIT License
+*/
+
 [class*=grid] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 [class*=grid]:after {
@@ -8,6 +18,8 @@
 }
 [class*=grid] [class*=col] {
   float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 10px;
 }
@@ -104,4 +116,3 @@
 .grid16 .col16 {
   width: 100%;
 }
-
